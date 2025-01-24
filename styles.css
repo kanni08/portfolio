@@ -57,56 +57,70 @@ body {
     }
 }
 
-/* Main Hero Section Styles */
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+        background-color: #f4f4f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1200px;
+    }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 2rem;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    .hero-text {
+        flex: 1;
+        margin-right: 20px;
+    }
 
-.text-content {
-    flex: 1;
-    max-width: 50%;
-}
+    .hero-text h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
 
-.text-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
+    .hero-text p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #555;
+    }
 
-.text-content h3 {
-    font-size: 1.5rem;
-    color: #666;
-}
+    .hero-text a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #6c63ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
 
-.image-content {
-    flex: 1;
-    text-align: right;
-}
+    .hero-text a:hover {
+        background-color: #5753d6;
+    }
 
-.home-image {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    .hero img {
+        flex: 1;
+        max-width: 400px;
+        border-radius: 8px;
+    }
 
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .hero img {
+            max-width: 70%;
+        }
+    }
 
 
 /* About section styles */
@@ -127,7 +141,7 @@ body {
 .about .about-image img {
     height: 400px;
     width: 450px;
-    padding: 5rem 5rem 5rem 1rem;
+    padding: 10rem 5rem 5rem 10rem;
 }
 
 /* Portfolio section styles */
